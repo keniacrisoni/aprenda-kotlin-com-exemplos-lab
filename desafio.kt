@@ -18,17 +18,24 @@ data class Formacao(val nome: String, val conteudos: List<ConteudoEducacional>) 
         for (u in inscritos) {
             var nome = u.nome
             var nivel = u.nivel
-            println("$nome $nivel")
+            println("Nome: $nome, Nivel: $nivel")
+            
         }
+
     }
 
     fun imprimirFormacao() {
+        println("----------------------------------------------------")
         println("Nome da Formação: $nome")
+        println("----------------------------------------------------")
         println("Conteúdos:")
+        println("----------------------------------------------------")
         for (conteudo in conteudos) {
             println(" - ${conteudo.nome}, Duração: ${conteudo.duracao} minutos")
         }
+        println("----------------------------------------------------")
         println("Usuários Inscritos:")
+        println("----------------------------------------------------")
         usuariosInscritos()
     }
 }
